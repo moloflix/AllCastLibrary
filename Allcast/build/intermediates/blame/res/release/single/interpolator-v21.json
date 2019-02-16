@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator-v21\\mtrl_fast_out_slow_in.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\4bf94086300e906bfa031f48abb6e125\\res\\interpolator-v21\\mtrl_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator-v21\\mtrl_fast_out_linear_in.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\4bf94086300e906bfa031f48abb6e125\\res\\interpolator-v21\\mtrl_fast_out_linear_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator-v21\\mtrl_linear_out_slow_in.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\4bf94086300e906bfa031f48abb6e125\\res\\interpolator-v21\\mtrl_linear_out_slow_in.xml"
+    }
+]

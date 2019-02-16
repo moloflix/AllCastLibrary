@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "804096874914",
+    "firebase_url": "https://allcast-bd38c.firebaseio.com",
+    "project_id": "allcast-bd38c",
+    "storage_bucket": "allcast-bd38c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804096874914:android:37b8c1aa9d493fdd",
+        "android_client_info": {
+          "package_name": "com.mo.moloflix.allcastlibrary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804096874914-sothtoedtvfutoqp0u9nftifa6dnah6b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mo.moloflix.allcastlibrary",
+            "certificate_hash": "2e12da085c0fc817ddf9ad0bfe71fb0eb2049298"
+          }
+        },
+        {
+          "client_id": "804096874914-u6oo1d5ndnfigqhm520vs6gnrub2ug8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNqO_drfytS3lCU0e0yME_QDDs0fAdLak"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804096874914-u6oo1d5ndnfigqhm520vs6gnrub2ug8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

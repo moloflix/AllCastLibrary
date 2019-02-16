@@ -1,0 +1,63 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:1:1-16:12
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:1:1-16:12
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:1:1-16:12
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:1:1-16:12
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:1:1-16:12
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:1:1-16:12
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:1:1-16:12
+	package
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:3:5-41
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:2:5-51
+	xmlns:android
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:8:22-73
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:9:5-86
+	android:name
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:9:22-83
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:10:22-78
+uses-sdk
+ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:11:5-48
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:11:5-48
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:11:5-48
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:11:5-48
+INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:11:5-48
+	android:targetSdkVersion
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:11:5-48
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+	tools:ignore
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:11:15-45
+	android:minSdkVersion
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+		ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:11:5-48
+		INJECTED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml
+application
+ADDED from C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\AndroidManifest.xml:13:5-14:11

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 3.3.1">
+
+    <issue
+        id="DuplicatePlatformClasses"
+        severity="Fatal"
+        message="`commons-logging` defines classes that conflict with classes now provided by Android. Solutions include finding newer versions or alternative libraries that don&apos;t have the same problem (for example, for `httpclient` use `HttpUrlConnection` or `okhttp` instead), or repackaging the library using something like `jarjar`."
+        category="Correctness"
+        priority="8"
+        summary="Duplicate Platform Classes"
+        explanation="There are a number of libraries that duplicate not just functionality of the Android platform but using the exact same class names as the ones provided in Android -- for example the apache http classes. This can lead to unexpected crashes.&#xA;&#xA;To solve this, you need to either find a newer version of the library which no longer has this problem, or to repackage the library (and all of its dependencies) using something like the `jarjar` tool, or finally, rewriting the code to use different APIs (for example, for http code, consider using `HttpUrlConnection` or a library like `okhttp`).">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\build.gradle"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            baseURL = String.format(&quot;%s://%s:%d&quot;, urlObject.getProtocol(), urlObject.getHost(), urlObject.getPort());"
+        errorLine2="                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\java\com\connectsdk\discovery\provider\ssdp\SSDPDevice.java"
+            line="89"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="InvalidPackage"
+        severity="Error"
+        message="Invalid package reference in library; not included in Android: `javax.naming.directory`. Referenced from `org.apache.http.conn.ssl.DefaultHostnameVerifier`."
+        category="Correctness"
+        priority="6"
+        summary="Package not included in Android"
+        explanation="This check scans through libraries looking for calls to APIs that are not included in Android.&#xA;&#xA;When you create Android projects, the classpath is set up such that you can only access classes in the API packages that are included in Android. However, if you add other projects to your libs/ folder, there is no guarantee that those .jar files were built with an Android specific classpath, and in particular, they could be accessing unsupported APIs such as java.applet.&#xA;&#xA;This check scans through library jars and looks for references to API packages that are not included in Android and flags these. This is only an error if your code calls one of the library classes which wind up referencing the unsupported package.">
+        <location
+            file="C:\Users\moham\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.5\1603dfd56ebcd583ccdf337b6c3984ac55d89e58\httpclient-4.5.5.jar"/>
+    </issue>
+
+    <issue
+        id="InvalidPackage"
+        severity="Error"
+        message="Invalid package reference in library; not included in Android: `javax.naming.ldap`. Referenced from `org.apache.http.conn.ssl.DefaultHostnameVerifier`."
+        category="Correctness"
+        priority="6"
+        summary="Package not included in Android"
+        explanation="This check scans through libraries looking for calls to APIs that are not included in Android.&#xA;&#xA;When you create Android projects, the classpath is set up such that you can only access classes in the API packages that are included in Android. However, if you add other projects to your libs/ folder, there is no guarantee that those .jar files were built with an Android specific classpath, and in particular, they could be accessing unsupported APIs such as java.applet.&#xA;&#xA;This check scans through library jars and looks for references to API packages that are not included in Android and flags these. This is only an error if your code calls one of the library classes which wind up referencing the unsupported package.">
+        <location
+            file="C:\Users\moham\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.5\1603dfd56ebcd583ccdf337b6c3984ac55d89e58\httpclient-4.5.5.jar"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        severity="Warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        category="Correctness"
+        priority="6"
+        summary="Implied locale in date format"
+        explanation="Almost all callers should use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()` to get a ready-made instance of SimpleDateFormat suitable for the user&apos;s locale. The main reason you&apos;d create an instance this class directly is because you need to format/parse a specific machine-readable format, in which case you almost certainly want to explicitly ask for US to ensure that you get ASCII digits (rather than, say, Arabic digits).&#xA;&#xA;Therefore, you should either use the form of the SimpleDateFormat constructor where you pass in an explicit locale, such as Locale.US, or use one of the get instance methods, or suppress this error if really know what you are doing."
+        url="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        urls="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        errorLine1="        SimpleDateFormat df = new SimpleDateFormat(&quot;HH:mm:ss&quot;);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\java\com\connectsdk\service\DLNAService.java"
+            line="939"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="WifiManagerPotentialLeak"
+        severity="Warning"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `context` to `context.getApplicationContext()`"
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Potential Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context.&#xA;&#xA;In many cases, it&apos;s not obvious from the code where the `Context` is coming from (e.g. it might be a parameter to a method, or a field initialized from various method calls). It&apos;s possible that the context being passed in is the application context, but to be on the safe side, you should consider changing `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="        WifiManager wifiMgr = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\java\com\connectsdk\discovery\DiscoveryManager.java"
+            line="206"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="WifiManagerPotentialLeak"
+        severity="Warning"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `context` to `context.getApplicationContext()`"
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Potential Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context.&#xA;&#xA;In many cases, it&apos;s not obvious from the code where the `Context` is coming from (e.g. it might be a parameter to a method, or a field initialized from various method calls). It&apos;s possible that the context being passed in is the application context, but to be on the safe side, you should consider changing `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="        WifiManager wifiMgr = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\java\com\connectsdk\core\Util.java"
+            line="143"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers.">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\com\amazonaws\mobileconnectors\remoteconfiguration\internal\net\AndroidRemoteConfigurationFetcher$TrustAllManager.class"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers.">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\com\amazonaws\mobileconnectors\remoteconfiguration\internal\net\AndroidRemoteConfigurationFetcher$TrustAllManager.class"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers."
+        errorLine1="    public void checkClientTrusted(X509Certificate[] chain, String authType)"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\java\com\connectsdk\service\webos\WebOSTVTrustManager.java"
+            line="26"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v11`) is unnecessary; `minSdkVersion` is 15. Merge all the resources in this folder into `values`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\res\values-v11"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v14`) is unnecessary; `minSdkVersion` is 15. Merge all the resources in this folder into `values`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\res\values-v14"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `DiscoveryManager` which has field `context` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="    private static DiscoveryManager instance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\java\com\connectsdk\discovery\DiscoveryManager.java"
+            line="112"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `#630505` with a theme that also paints a background (inferred theme is `@android:style/Theme.Holo`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;#630505&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\res\layout\header_dialog.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="IconMissingDensityFolder"
+        severity="Warning"
+        message="Missing density variation folders in `src\\main\\res`: drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="3"
+        summary="Missing density folder"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as `drawable-hdpi`.&#xA;&#xA;Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Users\moham\Desktop\AllCastLibrary\Allcast\src\main\res"/>
+    </issue>
+
+</issues>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E1318"
+    android:orientation="vertical"
+    tools:context=".playerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/back" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/castP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/cast_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights"
+            tools:srcCompat="@tools:sample/avatars[0]" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="Big Buck Bunny"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/Positiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progressTint="@color/colorPrimary"
+                android:thumbTint="@color/colorPrimary"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/rewind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/effect"
+                android:padding="10dp"
+                app:srcCompat="@drawable/rewind"
+                tools:ignore="UnusedAttribute" />
+
+            <ImageView
+                android:id="@+id/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/effect"
+                android:padding="10dp"
+                app:srcCompat="@drawable/pause"
+                tools:ignore="UnusedAttribute" />
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/effect"
+                android:padding="20dp"
+                app:srcCompat="@drawable/play"
+                tools:ignore="UnusedAttribute" />
+
+            <ImageView
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/effect"
+                android:padding="10dp"
+                app:srcCompat="@drawable/stop"
+                tools:ignore="UnusedAttribute" />
+
+            <ImageView
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/effect"
+                android:padding="10dp"
+                app:srcCompat="@drawable/forward"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

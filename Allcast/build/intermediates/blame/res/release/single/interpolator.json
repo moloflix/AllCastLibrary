@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator\\mr_fast_out_slow_in.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-28.0.0.aar\\5671eab189ad9ceaefbe5151491a5f54\\res\\interpolator\\mr_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator\\mtrl_linear.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\4bf94086300e906bfa031f48abb6e125\\res\\interpolator\\mtrl_linear.xml"
+    },
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator\\mtrl_fast_out_linear_in.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\4bf94086300e906bfa031f48abb6e125\\res\\interpolator\\mtrl_fast_out_linear_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator\\mr_linear_out_slow_in.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-28.0.0.aar\\5671eab189ad9ceaefbe5151491a5f54\\res\\interpolator\\mr_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator\\mtrl_fast_out_slow_in.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\4bf94086300e906bfa031f48abb6e125\\res\\interpolator\\mtrl_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\moham\\Desktop\\AllCastLibrary\\Allcast\\build\\intermediates\\res\\merged\\release\\interpolator\\mtrl_linear_out_slow_in.xml",
+        "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\4bf94086300e906bfa031f48abb6e125\\res\\interpolator\\mtrl_linear_out_slow_in.xml"
+    }
+]
